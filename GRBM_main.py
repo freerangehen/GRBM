@@ -68,7 +68,9 @@ def main():
     
     imgArray = np.asarray(allimages, theano.config.floatX)[0:batch_size].reshape(batch_size,361)
     miniBatch = theano.shared(np.float32(imgArray/255.0), borrow=True, allow_downcast=True)
-    
+  
+    print("imgArray.shape="+str(imgArray.shape))
+  
     myRBMrv.loadParameters('CBCLTrial_256_2500_A')
     
     myRBMrv.trainMB(miniBatch.eval(), noOfEpoch, miniBatchSize)
