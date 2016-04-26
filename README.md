@@ -14,11 +14,6 @@ path='./train/face'
 ```
 
 
-    r_a = 0.001 # training rate for a
-    r_b = 0.001 # training rate for b
-    r_omg = 0.00005 # trianing rate for omega 
-    r_sig = 0.00005 # training rate for sigma
-
 
 #example usage
 The RBM is implemented in the `RBMrv_T` class in GRBM.py with constructor:
